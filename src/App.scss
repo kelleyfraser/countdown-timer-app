@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-}
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Courier+Prime&family=Nunito:wght@200;400;700&family=Source+Code+Pro:wght@200;300&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// Override default variables 
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/utilities";
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+$utilities: map-merge($utilities,
+    ("width": map-merge(map-get($utilities, "width"),
+        (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+            (85: 85%,
+              90: 90%)),
+        ),
+      ),
+    ));
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+$theme-colors: (
+  "primary": #001C55,
+  "blue": $primary
+);
 
-.App-link {
-  color: #61dafb;
-}
+$primary: #001C55;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
