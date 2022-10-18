@@ -25,3 +25,27 @@ $primary: #001C55;
 
 // Import Bootstrap
 @import '~bootstrap/scss/bootstrap.scss';
+
+.btn-icon:hover {
+  cursor: pointer;
+}
+
+.header-container {
+  height: 125px;
+  background-color: $primary;
+  color: white;
+  padding: 10px 20px;
+
+  .appName {
+    margin-top: 35px;
+  }
+
+  .btn-icon {
+    margin-left: 98%;
+    transition: all 0.3s;
+  }
+
+  .btn-icon:hover {
+    transform: rotate(45deg);
+  }
+}
