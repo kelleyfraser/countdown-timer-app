@@ -90,6 +90,7 @@ $secondary: #D3D0CB;
 
       .time-container {
         text-align: center;
+
         h1 {
           margin-top: 0;
           margin-bottom: 5px;
@@ -99,6 +100,45 @@ $secondary: #D3D0CB;
           margin-bottom: 2px;
           font-weight: bold;
         }
+      }
+    }
+  }
+}
+
+.form-container {
+  max-width: 1025px;
+
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .time-unit-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .form-check-label {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form-container {
+    .time-unit-select {
+      display: flex;
+      flex-direction: column;
+      
+      .form-check {
+        margin: 0 auto;
+        margin-top: 5px;
+      }
+
+      .form-check-label {
+        width: 70px;
       }
     }
   }
