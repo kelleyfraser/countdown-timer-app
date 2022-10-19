@@ -22,13 +22,30 @@ $theme-colors: (
 );
 
 $primary: #001C55;
+$secondary: #D3D0CB;
 
 // Import Bootstrap
 @import '~bootstrap/scss/bootstrap.scss';
 
-.btn-icon:hover {
-  cursor: pointer;
+.App {
+  .btn-icon:hover {
+    cursor: pointer;
+  }
+
+  .is-primary-text {
+    color: $primary;
+  }
+
+  .is-white-text {
+    color: white;
+  }
+
+  .is-secondary-background {
+    background-color: $secondary;
+  }
 }
+
+
 
 .header-container {
   height: 125px;
@@ -47,5 +64,42 @@ $primary: #001C55;
 
   .btn-icon:hover {
     transform: rotate(45deg);
+  }
+}
+
+.countdown-list {
+  padding: 0 40px;
+
+  .card {
+    max-width: 1025px;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 48%;
+      max-width: 375px;
+
+      .time-container {
+        text-align: center;
+        h1 {
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+
+        p {
+          margin-bottom: 2px;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
