@@ -7,7 +7,7 @@ const CountdownCard = ({data}) => {
       <h1 className="card-title is-primary-text">{data.name}</h1>
       <div className="card-content">
         {Object.entries(data.times).map(([time, num]) => (
-          <TimeIncrement time={num} unit={time}/>
+          <TimeIncrement key={time} time={num} unit={time}/>
         ))}
       </div>
     </div>
