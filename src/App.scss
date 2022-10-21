@@ -45,8 +45,6 @@ $secondary: #D3D0CB;
   }
 }
 
-
-
 .header-container {
   height: 125px;
   background-color: $primary;
@@ -83,7 +81,6 @@ $secondary: #D3D0CB;
     align-items: center;
 
     .card-title {
-      font-size: 4vw;
       width: 30%;
       margin-right: 20px;
       margin-bottom: 0;
@@ -115,12 +112,12 @@ $secondary: #D3D0CB;
 .form-container {
   background: white;
   border-radius: 10px;
-  box-shadow:0px 4px 4px 0px rgba(60, 64, 67, 0.302), 0px 8px 12px 6px rgba(60, 64, 67, 0.149);
+  box-shadow: 0px 4px 4px 0px rgba(60, 64, 67, 0.302), 0px 8px 12px 6px rgba(60, 64, 67, 0.149);
   left: 50%;
   max-width: 80%;
   padding: 40px 0;
   position: fixed;
-  top: 50%; 
+  top: 50%;
   transform: translate(-50%, -50%);
 
   form {
@@ -146,7 +143,7 @@ $secondary: #D3D0CB;
     .time-unit-select {
       display: flex;
       flex-direction: column;
-      
+
       .form-check {
         margin: 0 auto;
         margin-top: 5px;
@@ -162,5 +159,11 @@ $secondary: #D3D0CB;
     p {
       font-size: 12px;
     }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card-title {
+    font-size: 4vw;
   }
 }
