@@ -1,15 +1,14 @@
 import React from 'react';
 import TimeIncrement from './timeIncrement';
 
-const CountdownCard = () => {
+const CountdownCard = ({data}) => {
   return (
     <div className="card is-secondary-background">
-      <h1 className="card-title is-primary-text">Countdown 1</h1>
+      <h1 className="card-title is-primary-text">{data.name}</h1>
       <div className="card-content">
-        <TimeIncrement time={100} unit={"days"} />
-        <TimeIncrement time={4} unit={"hours"} />
-        <TimeIncrement time={30} unit={"mins"} />
-        <TimeIncrement time={55} unit={"secs"} />
+        {Object.entries(data.times).map(([time, num]) => (
+          <TimeIncrement time={num} unit={time}/>
+        ))}
       </div>
     </div>
   );

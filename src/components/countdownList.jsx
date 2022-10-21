@@ -1,12 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import CountdownCard from "./countdownCard";
 
-const CountdownList = () => {
+const CountdownList = ({countdowns}) => {
+
   return (
     <div className="countdown-list container-fluid">
-      <CountdownCard />
-      <CountdownCard />
-      <CountdownCard />
+      {countdowns.map((countdown) => (
+        <CountdownCard data={countdown} />
+      ))}
     </div>
   );
 }
