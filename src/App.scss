@@ -82,12 +82,18 @@ $secondary: #D3D0CB;
     justify-content: space-between;
     align-items: center;
 
+    .card-title {
+      font-size: 4vw;
+      width: 30%;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
     .card-content {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      width: 48%;
-      max-width: 375px;
+      width: calc(70% - 20px);
 
       .time-container {
         text-align: center;
@@ -149,6 +155,12 @@ $secondary: #D3D0CB;
       .form-check-label {
         width: 70px;
       }
+    }
+  }
+
+  .card-content {
+    p {
+      font-size: 12px;
     }
   }
 }
